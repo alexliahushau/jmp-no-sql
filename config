@@ -1,0 +1,11 @@
+# vim /etc/cassandra/conf/cassandra.yaml
+cluster_name: 'cassandra_cluster‘
+seeds: "192.168.10.1, 192.168.10.2, 192.168.10.3“
+listen_address: 192.168.10.1
+# vim /etc/cassandra/cassandra-topology.properties
+# Cassandra Node IP=Data Center:Rack
+192.168.10.1=dc1:rac1
+192.168.10.2=dc1:rac1
+192.168.10.3=dc1:rac1
+# default for unknown nodes
+default=DC1:r1
